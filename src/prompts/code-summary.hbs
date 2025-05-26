@@ -1,0 +1,9 @@
+Write a concise summary and changelog for PR titled "{{prTitle}}".
+
+Files:
+{{#each files}}- {{this}}\n{{/each}}
+
+Output JSON: {
+  summary: string,
+  changelog: string
+}

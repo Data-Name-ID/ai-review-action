@@ -1,0 +1,20 @@
+name: 'AI PR Review'
+description: 'Automatically generate and post code review comments using Google Gemini (genkit) + TypeScript'
+inputs:
+  github_token:
+    description: 'GitHub token (secrets.GITHUB_TOKEN)'
+    required: true
+  google_api_key:
+    description: 'Google Gemini API key'
+    required: true
+  comment_language:
+    description: 'Language for review comments'
+    required: false
+    default: 'English'
+  model:
+    description: 'Gemini model ID'
+    required: false
+    default: 'googleai/gemini-2.0-flash'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
